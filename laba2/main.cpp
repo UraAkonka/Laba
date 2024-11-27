@@ -11,7 +11,9 @@ void readFromFile(const string& filename, vector<string>& lines) {
 }
 
 void print(const vector<string>& lines) {
-}
+    for (const auto& str : lines) {
+        cout << str << endl;
+    }
 
 void write(const vector<string>& lines, const string& filename) {
 }
