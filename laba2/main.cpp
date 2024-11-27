@@ -20,8 +20,8 @@ void print(const vector<string>& lines) {
     for (const auto& str : lines) {
         cout << str << endl;
     }
-
-void writeToFile(const vector<string>& lines, const string& filename) {
+}
+void write(const vector<string>& lines, const string& filename) {
     ofstream file(filename);
     if (!file) {
         cerr << "Ошибка открытия файла для записи!" << endl;
@@ -30,8 +30,11 @@ void writeToFile(const vector<string>& lines, const string& filename) {
     for (const auto& str : lines) {
         file << str << endl;
     }
+}
+
 
 int main() {
+    setlocale(LC_ALL, "Russian");
     vector<string> lines;
     // Заполняем вектор вручную для теста
     lines.push_back("Пример строки 1");
@@ -39,10 +42,10 @@ int main() {
     lines.push_back("Пример строки 3");
 
     // Вызов функции № 2 для вывода содержимого вектора
-    printVector(lines);
+    print(lines);
 
     // Вызов функции № 3 для записи содержимого вектора в файл
-    writeToFile(lines, "output.txt");
+    write(lines, "output.txt");
 
     return 0;
 }
