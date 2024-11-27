@@ -5,9 +5,9 @@
 
 using namespace std;
 
-// function1.cpp
-
-void readFromFile(const string& filename, vector<string>& lines) {
+void read(const string& filename, vector<string>& lines) {
+    ifstream file(filename);
+    string line;
 }
 
 void print(const vector<string>& lines) {
