@@ -23,6 +23,17 @@ void write(const vector<string>& lines, const string& filename) {
 }
 
 int main() {
+    vector<string> lines;
+    // Заполняем вектор вручную для теста
+    lines.push_back("Пример строки 1");
+    lines.push_back("Пример строки 2");
+    lines.push_back("Пример строки 3");
+
+    // Вызов функции № 2 для вывода содержимого вектора
+    printVector(lines);
+
+    // Вызов функции № 3 для записи содержимого вектора в файл
+    writeToFile(lines, "output.txt");
 
     return 0;
 }
